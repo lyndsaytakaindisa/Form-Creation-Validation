@@ -14,17 +14,17 @@ async function fetchUserData(){
         dataContainer.innerHTML='';
 
         //creating the user List 
-        let userList= '<ul>';
+        const userList = document.createElement('ul');
         //looping through the users array
         users.forEach(function(user){
+            let list = document.createElement('li');
             //setting the text content of the <li> to the user's name 
-            userList +=`<li>${user.name}</li>`;
-           
+             list.textContent=user.name;
+            //append the <li> to userlList
+            userList.appendChild(list);
         });
-         //append the <li> to userlList
-         userList += '</ul>';
          //append the userList to dataContainer
-         dataContainer.innerHTML =userList;
+         dataContainer.appendChild(userList);
          }catch{
             //clear the existing content of dataContainer
             dataContainer.innerHTML='Failed to load user data'; 
