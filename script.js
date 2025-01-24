@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded',function(){
         const password =passwordInput.value.trim();
 
         //Validation of the username 
-        if (username.value.length < 3) {
+        if (username.length < 3) {
             isValid=false;
             messages.push("Username must be at least 3 characters long !")
           } 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded',function(){
             messages.push("Email address is invalid");
         }
         //Validation of the password
-        if (password.value.length < 8){
+        if (password.length < 8){
             isValid=false;
             messages.push("Please enter a valid password!")
           }
