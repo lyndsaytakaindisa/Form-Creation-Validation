@@ -32,14 +32,15 @@ document.addEventListener('DOMContentLoaded',function(){
         //Validation of the password
         if (password.value.length < 8){
             isValid=false;
-            messages.push("Please enter a valis password!")
+            messages.push("Please enter a valid password!")
           }
 
           //feedback display logic
           feedbackDiv.style.display="block";
 
           if (isValid == true){
-            feedbackDiv.textContent('Registration Successful');
+            feedbackDiv.textContent="Registration Successful!";
+            feedbackDiv.style.color="#23a745";
         }
         else{
             feedbackDiv.innerHTML=messages.join('<br>');
